@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Barre de navigation */
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed; /* Rend la barre de navigation fixe en haut */
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.2); /* Fond noir semi-transparent */
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+header nav ul {
+    display: flex;
+    margin-top: -25px;
+}
+
+header nav ul li .icon {
+    color: #E74C3C;
+}
+
+header nav ul li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 40px;
+    letter-spacing: 5px;
+    transition: color 0.3s ease;
+ /* Fond semi-transparent */
+}
+
+header nav ul li a:hover {
+    color: #E74C3C;
+    border-bottom: 2px solid #E74C3C; 
+    border-width: 3px;
+    padding-bottom: 2px; 
+    border
+}
+
+header .logo img {
+    margin-left: -20px;
+}
+
+.menu-icon {
+    display: none;
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.menu-icon i {
+    color: black;
+    font-size: 35px;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 1070px) {
+    nav ul {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        flex-direction: column;
+        width: 100%;
+        background: white;
+        padding: 0;
+        overflow: hidden;
+        display: block;
+        transition: color 0.3s ease;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-icon i {
+        margin-left: -70px;
+        margin-top: 20px;
+    }
+
+    #menuList {
+        transition: all 0.5s;
+    }
+}
+
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: -50px;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
