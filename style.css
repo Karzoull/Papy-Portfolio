@@ -16,9 +16,12 @@ body {
 header {
     position: relative;
     width: 100%;
-    height: 100vh; /* Adapte la hauteur à l'écran */
+    height: 100vh; 
     overflow: hidden;
+    background-attachment: scroll; 
+    background: cover;
 }
+
 
 
 header .fond img {
@@ -115,57 +118,13 @@ header .logo img {
     margin-left: -20px;
 }
 
-.menu-icon {
-    display: none;
-    position: fixed;
-    top: 30px;
-    right: 15px;
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 101;
+
+
+.menu-icon i:hover {
+    color: #E74C3C;
+
 }
 
-.menu-icon i {
-    color: black;
-    font-size: 35px;
-}
-
-/* Responsive styling for smaller screens */
-@media (max-width: 1070px) {
-    nav ul {
-        position: absolute;
-        top: 20px;
-        right: 0;
-        flex-direction: column;
-        width: 100%;
-        background: white;
-       
-        padding: 0;
-        overflow: hidden;
-        display: block;
-        transition: color 0.3s ease;
-    }
-
-    nav ul li {
-        width: 100%;
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    .menu-icon {
-        display: block;
-        cursor: pointer;
-    }
-
-    .menu-icon i {
-        margin-left: -70px;
-        margin-top: 20px;
-    }
-
-    #menuList {
-        transition: all 0.5s;
-    }
-}
 
 .scroll-button {
     display: flex;
@@ -218,3 +177,4 @@ header .logo img {
 .service {
     height: 100vh;
 }
+
