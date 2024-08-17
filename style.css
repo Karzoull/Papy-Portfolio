@@ -10,6 +10,9 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 html {
@@ -27,7 +30,6 @@ header {
 }
 
 
-
 header .fond img {
     width: 100%;
     filter: brightness(40%);
@@ -40,11 +42,12 @@ header .fond .text {
     transform: translateY(-50%);
     width: 100%;
     text-align: center;
-    z-index: 2; /* Assure que le texte est visible au-dessus de l'image */
+    z-index: 2; 
     justify-content: center;
     align-items: center;
     text-align: center;
     margin-top: -620px;
+    padding: 0 20px;
 }
 
 header .fond .text p{
@@ -69,12 +72,17 @@ header .fond .text h1 {
 .text {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 3s ease-out, transform 0.6s ease-out;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .text.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+header .fond {
+
+    z-index: 1; /* Assurez-vous que le texte est au-dessus de l'image */
 }
 
 header nav {
@@ -138,11 +146,14 @@ header .logo img {
     height: 90px;
     border: 2px solid white;
     border-radius: 50px; 
-    position: relative;
-    margin: 0 auto;
-    margin-top: 70px;
     overflow: hidden; 
     cursor: pointer;
+    position: absolute;
+    bottom: 200px; /* Place le bouton au bas de l'écran */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    
 }
 
 .chevron-down::before,
@@ -182,3 +193,93 @@ header .logo img {
     height: 100vh;
 }
 
+@media (max-width: 1070px) {
+    header {
+        background-image: url('image/DALL·E 2024-08-17 06.31.51 - A top-down view of a very dark workspace with a sleek, minimalist setup. The scene includes a closed laptop, a monitor, and a mouse on a dark desk. Th.png');
+        background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    background-image: url('image/DALL·E 2024-08-17 06.31.51 - A top-down view of a very dark workspace with a sleek, minimalist setup. The scene includes a closed laptop, a monitor, and a mouse on a dark desk. Th.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+  
+    }
+
+    header .fond img{
+        display: none;
+        filter: brightness(40%);
+    }
+
+   
+}
+
+@media (max-width: 810px) {
+    .scroll-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 110px;
+        border: 2px solid white;
+        border-radius: 50px; 
+        overflow: hidden; 
+        cursor: pointer;
+        position: absolute;
+        bottom: 190px; /* Place le bouton au bas de l'écran */
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3;
+        
+    }
+
+    header .fond {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 690px;
+        margin-left: 820px;
+    }
+
+    header .fond img {
+        filter: brightness(10%);
+    }
+}
+
+@media (max-width: 412px) {
+    .scroll-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 90px;
+        border: 2px solid white;
+        border-radius: 50px; 
+        overflow: hidden; 
+        cursor: pointer;
+        position: absolute;
+        bottom: 120px; /* Place le bouton au bas de l'écran */
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3;
+        
+    }
+}
+
+@media (max-width: 1070px) {
+    header .fond .text h1 {
+        font-size: 40px;
+    }
+
+    header .fond .text p {
+        font-size: 16px;
+    }
+}

@@ -7,6 +7,9 @@ function checkVisibility() {
         const elementTop = element.getBoundingClientRect().top + scrollTop;
 
         if (scrollTop + windowHeight > elementTop) {
+            if (!element.classList.contains('visible')) {
+                console.log('Element is becoming visible:', element);
+            }
             element.classList.add('visible');
         }
     });
