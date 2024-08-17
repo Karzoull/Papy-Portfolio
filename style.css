@@ -12,31 +12,63 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Barre de navigation */
+
 header {
+    position: relative;
     width: 100%;
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    position: fixed; /* Rend la barre de navigation fixe en haut */
-    top: 0;
-    left: 0;
-    z-index: 100;
-    background-color: rgba(0, 0, 0, 0.2); /* Fond noir semi-transparent */
+    height: 100vh; /* Adapte la hauteur à l'écran */
+    overflow: hidden;
 }
+
+
+header .fond img {
+    width: 100%;
+    filter: brightness(40%);
+    height: 100%;
+}
+
+header .fond .text {
+     position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    z-index: 2; /* Assure que le texte est visible au-dessus de l'image */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: -650px;
+}
+
+header .fond .text h1,
+header .fond .text h2 {
+    color: white;
+    font-size: 60px;
+    margin: 10px 0;
+}
+
 
 header nav {
     display: flex;
+    position: absolute;
     justify-content: center;
     width: 100%;
+     position: relative;
+    transform: translateY(-50%);
+    text-align: center;
+    z-index: 2;
+    
 }
 
 header nav ul {
     display: flex;
-    margin-top: -25px;
+    margin-top: -600px;
 }
+
+header nav ul li {
+    margin: 0 15px;
+}
+
 
 header nav ul li .icon {
     color: #E74C3C;
@@ -44,21 +76,20 @@ header nav ul li .icon {
 
 header nav ul li a {
     display: block;
-    color: rgb(255, 255, 255);
-    font-size: 14px;
+    color: white;
+    font-size: 16px;
     font-weight: 600;
-    padding: 10px 40px;
+    padding: 10px 30px;
     letter-spacing: 5px;
-    transition: color 0.3s ease;
- /* Fond semi-transparent */
+    transition: color 0.8s ease;
+   
 }
 
 header nav ul li a:hover {
-    color: #E74C3C;
-    border-bottom: 2px solid #E74C3C; 
-    border-width: 3px;
-    padding-bottom: 2px; 
-    border
+    color: white;
+   background-color: #E74C3C;
+   border-radius: 10px;
+   padding: 10px 30px;
 }
 
 header .logo img {
@@ -68,8 +99,8 @@ header .logo img {
 .menu-icon {
     display: none;
     position: fixed;
-    top: 50px;
-    right: 20px;
+    top: 30px;
+    right: 15px;
     font-size: 30px;
     cursor: pointer;
     z-index: 101;
@@ -89,6 +120,7 @@ header .logo img {
         flex-direction: column;
         width: 100%;
         background: white;
+       
         padding: 0;
         overflow: hidden;
         display: block;
@@ -116,46 +148,53 @@ header .logo img {
     }
 }
 
-
-.carousel-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    margin-top: -50px;
-}
-
-.carousel {
+.scroll-button {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel-item {
-    min-width: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 90px;
+    border: 2px solid white;
+    border-radius: 50px; 
     position: relative;
-}
-
-.carousel-item img {
-    width: 100%;
-    height: auto;
-    vertical-align: middle;
-}
-
-.carousel-control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
+    margin: 0 auto;
+    overflow: hidden; 
     cursor: pointer;
-    z-index: 10;
 }
 
-.carousel-control.prev {
-    left: 10px;
+.chevron-down::before,
+.chevron-down::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(45deg);
+    position: absolute;
+    animation: moveFullHeight 1.5s infinite ease-in-out; 
+    margin-left: -5px;
+    margin-top: -20px;
 }
 
-.carousel-control.next {
-    right: 10px;
+.chevron-down::before {
+    top: 35%; 
+}
+
+.chevron-down::after {
+    top: 50%; 
+}
+
+
+@keyframes moveFullHeight {
+    0%, 100% {
+        transform: translateY(0) rotate(45deg);
+    }
+    50% {
+        transform: translateY(30px) rotate(45deg); /* Mouvement vers le bas */
+    }
+}
+
+.service {
+    height: 100vh;
 }
