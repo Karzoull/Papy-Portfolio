@@ -37,16 +37,38 @@ header .fond .text {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: -650px;
+    margin-top: -620px;
 }
 
-header .fond .text h1,
-header .fond .text h2 {
+header .fond .text p{
+    font-size: 20px;
+    color: white;
+    margin-top: 20px;
+    word-spacing: 10px;
+    margin-left: -15px;
+}
+
+header .fond .text span {
+      word-spacing: 5px;
+         
+}
+header .fond .text h1 {
     color: white;
     font-size: 60px;
     margin: 10px 0;
 }
 
+
+.text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 3s ease-out, transform 0.6s ease-out;
+}
+
+.text.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 header nav {
     display: flex;
@@ -62,7 +84,7 @@ header nav {
 
 header nav ul {
     display: flex;
-    margin-top: -600px;
+    margin-top: -645px;
 }
 
 header nav ul li {
@@ -79,17 +101,14 @@ header nav ul li a {
     color: white;
     font-size: 16px;
     font-weight: 600;
-    padding: 10px 30px;
+    padding: 10px 45px;
     letter-spacing: 5px;
-    transition: color 0.8s ease;
+    transition: color 0.5s ease;
    
 }
 
 header nav ul li a:hover {
-    color: white;
-   background-color: #E74C3C;
-   border-radius: 10px;
-   padding: 10px 30px;
+    color: #e95f50;
 }
 
 header .logo img {
@@ -158,6 +177,7 @@ header .logo img {
     border-radius: 50px; 
     position: relative;
     margin: 0 auto;
+    margin-top: 70px;
     overflow: hidden; 
     cursor: pointer;
 }
