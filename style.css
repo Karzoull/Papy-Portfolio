@@ -12,6 +12,10 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 
 header {
     position: relative;
