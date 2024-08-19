@@ -324,33 +324,43 @@ header nav.show {
 
 
 .services {
-    height: 60vh;
+    height: 100vh;
+}
+
+.services .fond {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+    z-index: 1;
+}
+
+.services .contend_text {
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin-top: 80px;
+    margin-top: 70px;
 }
 
-.services .contend .contend_text h1{
+.services .contend_text h1 {
     font-size: 55px;
-    font-weight: 600;
     color: #222222;
+    font-weight: 700;
 }
 
-.services .contend .contend_text p {
-    color:   #8F8F8F;
-    font-size: 35px;
-    font-weight: 400;
+.services .contend_text p {
+    color: #8F8F8F;
+    font-size: 30px;
     position: relative;
 }
 
-.services .contend .contend_text p::after {
+.services .contend_text p::after {
     content: "";
     display: block;
-    width: 6%; /* Ajuste ce pourcentage pour raccourcir la bordure */
-    height: 6px;
+    width: 3%; 
+    height: 5px;
     background-color: #E74C3C;
     position: absolute;
     bottom: -50px;
-    left: 47%; /* Pour centrer la bordure */
+    left: 905px; 
 }
