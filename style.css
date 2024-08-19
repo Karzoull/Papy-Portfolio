@@ -16,7 +16,7 @@ body {
 }
 
 html {
-    scroll-behavior: smooth;
+   scroll-behavior: smooth  ;
 }
 
 
@@ -58,10 +58,7 @@ header .fond .text p{
     margin-left: -15px;
 }
 
-header .fond .text span {
-      word-spacing: 5px;
-         
-}
+
 header .fond .text h1 {
     color: white;
     font-size: 60px;
@@ -127,26 +124,39 @@ header .logo img {
     margin-left: -20px;
 }
 
-
-
-.menu-icon i:hover {
-    color: #E74C3C;
-
+header nav.show {
+    display: flex;
+    transform: translateY(0); 
 }
 
+.menu-icon {
+    display: none; 
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+
+.menu-icon i {
+    font-size: 40px;
+    color: white;
+    margin: 5px 25px; 
+}
 
 .scroll-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 90px;
+    width: 36px;
+    height: 85px;
     border: 2px solid white;
     border-radius: 50px; 
     overflow: hidden; 
     cursor: pointer;
     position: absolute;
-    bottom: 200px; /* Place le bouton au bas de l'écran */
+    bottom: 150px; 
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
@@ -182,83 +192,83 @@ header .logo img {
         transform: translateY(0) rotate(45deg);
     }
     50% {
-        transform: translateY(30px) rotate(45deg); /* Mouvement vers le bas */
+        transform: translateY(30px) rotate(45deg); 
     }
 }
 
-.service {
-    height: 100vh;
-}
-
-@media (max-width: 1070px) {
-    header {
-    background-image: url('image/DALL·E 2024-08-17 06.31.51 - A top-down view of a very dark workspace with a sleek, minimalist setup. The scene includes a closed laptop, a monitor, and a mouse on a dark desk. Th.png');
-    width: 100%;
-    height: 100vh; 
-    background-image: url('image/DALL·E 2024-08-17 06.31.51 - A top-down view of a very dark workspace with a sleek, minimalist setup. The scene includes a closed laptop, a monitor, and a mouse on a dark desk. Th.png');   
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
-  
-    }
-    header .fond img{
-        display: none; 
-    }
-
-}
-
-@media (max-width: 810px) {
-    .scroll-button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 43px;
-        height: 105px;
-        border: 2px solid white;
-        border-radius: 50px; 
-        overflow: hidden; 
-        cursor: pointer;
+@media only screen and (max-width: 1024px) {
+    .menu-icon {
+        display: block;
         position: absolute;
-        bottom: 190px; /* Place le bouton au bas de l'écran */
-        left: 52%;
-        transform: translateX(-50%);
+        top: 25px;
+        right: 25px;
         z-index: 3;
-        
+        cursor: pointer;
+    }
+    
+    header nav {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.95);        ;
+        width: 100%;
+        height: 95vh;
+        z-index: 2;
+        transition: transform 0.3s ease-in-out;
+        transform: translateY(-100%); 
+    }
+    header nav ul {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 0;
+    }
+    
+    header nav ul li {
+        margin: 20px 0;
+    }
+    
+    header nav ul li a {
+        color: white;
+        font-size: 24px;
+        padding: 10px;
     }
 
     header .fond {
-        display: flex;
-        align-items: center;
-        margin-top: 820px;
-        margin-left: 810px;
-    }
-
-    header::before {
-        content: '';
-        position: absolute;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.4); /* 40% de noir pour assombrir le fond */
-        z-index: 1; /* Placer le filtre derrière le texte */
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .fond img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        z-index: 1;
+        filter: brightness(40%);
+    }
+
+    header .fond .text {
+        position: relative;
+        z-index: 2;
+        padding: 0 40px;
+        text-align: center;
+       
     }
     
-    header .fond .text h1 {
-        font-size: 50px;
-        color: white;
-        letter-spacing: 6px;
+    header .fond .text .span {
+        display: none;
     }
 
-    header .fond .text p {
-        font-size: 22px;
-        color: white;
-        font-weight: 600;
-    }
-}
-
-@media (max-width: 412px) {
     .scroll-button {
         display: flex;
         justify-content: center;
@@ -270,41 +280,77 @@ header .logo img {
         overflow: hidden; 
         cursor: pointer;
         position: absolute;
-        bottom: 120px; /* Place le bouton au bas de l'écran */
+        bottom: 90px; 
         left: 50%;
         transform: translateX(-50%);
         z-index: 3;
         
     }
-    header .fond {
-        display: flex;
-        align-items: center;
-        margin-top: 800px;
-        margin-left: 422px;
-    }
-   
-    header::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.4); /* 40% de noir pour assombrir le fond */
-        z-index: 1; /* Placer le filtre derrière le texte */
+    
+
+}
+
+/* Ajustements pour les petits écrans (smartphones) */
+@media only screen and (max-width: 768px) {
+    header .fond .text {
+        text-align: center;
     }
 
     header .fond .text h1 {
-        font-size: 35px;
-        color: white;
-        letter-spacing: 6px;
+        font-size: 50px;
+    }
+
+    header nav ul {
+        top: 10px;
+    }
+   
+}
+
+/* Pour les très petits écrans (petits smartphones) */
+@media only screen and (max-width: 480px) {
+    header .fond .text h1 {
+        font-size: 45px;
     }
 
     header .fond .text p {
         font-size: 15px;
-        color: white;
-        font-weight: 600;
     }
-    
+
+    header nav ul {
+        top: 10px;
+    }
+  
 }
 
+
+.services {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.services .contend .contend_text h1{
+    font-size: 55px;
+    font-weight: 600;
+    color: #222222;
+}
+
+.services .contend .contend_text p {
+    color:   #8F8F8F;
+    font-size: 35px;
+    font-weight: 400;
+    position: relative;
+}
+
+.services .contend .contend_text p::after {
+    content: "";
+    display: block;
+    width: 6%; /* Ajuste ce pourcentage pour raccourcir la bordure */
+    height: 6px;
+    background-color: #E74C3C;
+    position: absolute;
+    bottom: -50px;
+    left: 47%; /* Pour centrer la bordure */
+}

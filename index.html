@@ -13,8 +13,11 @@
         <div class="fond">
             <img src="image/DALL·E 2024-08-17 06.31.51 - A top-down view of a very dark workspace with a sleek, minimalist setup. The scene includes a closed laptop, a monitor, and a mouse on a dark desk. Th.png" alt="">
             <div class="text">
-                <h1>DEVELOPPEUR - INFORMATIQUE <br> WEB</h1>
-                <p>E-Commerce , Portfolio , <span>Site Vitrine</span></p>
+                <h1>DEVELOPPEUR <span class="span">-</span>INFORMATIQUE <br> WEB</h1>
+                <p>E-Commerce , Portfolio , Site Vitrine</p>
+            </div>
+            <div class="menu-icon">
+                <i class="fa-solid fa-bars"></i>
             </div>
         </div>
         <nav>
@@ -26,15 +29,29 @@
                 <li><a href="#">CONTACT</a></li>
             </ul>
         </nav>
-
+        
         <div class="scroll-button" >
-            <a href="#"><i class="chevron-down"></i></a>
+            <a href="#service"><i class="chevron-down"></i></a>
         </div>
     </header>
     <script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
-   
- 
     
     <script src="script.js"></script>
+    <script>
+       document.querySelector('.menu-icon').addEventListener('click', function() { // Ajoute une alerte pour vérifier le clic
+    const nav = document.querySelector('header nav');
+    nav.classList.toggle('show'); // Ajoute ou retire la classe 'show'
+});
+    </script> 
+    
+    <section class="services" id="service">
+        <div class="contend">
+            <div class="contend_text">
+                <h1>NOS SERVICES</h1>
+                <p>Des services sur mesure pour répondre à vos attentes.</p>
+              
+            </div>
+        </div>
+    </section>
 </body>
 </html>
