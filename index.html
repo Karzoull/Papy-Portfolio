@@ -38,7 +38,7 @@
     
     <script src="script.js"></script>
     <script>
-       document.querySelector('.menu-icon').addEventListener('click', function() { // Ajoute une alerte pour vérifier le clic
+       document.querySelector('.menu-icon').addEventListener('click', function() { 
     const nav = document.querySelector('header nav');
     nav.classList.toggle('show'); // Ajoute ou retire la classe 'show'
 });
@@ -49,26 +49,89 @@
             <h1>NOS SERVICES</h1>
             <p>Des solutions taillées pour vous.</p>
         </div>
-        <div class="fond">
-            <img src="/image/two-phone-mockup-no-background-free-png-removebg-preview.png" alt="">
+        <div class="text_info">
+            <div class="text1">
+                <div class="hidden-text">
+                    <h1 >GESTION DE PROJETS WEB</h1>
+                   
+                    <p >Site vitrine, corporate, évènementiel, <br>
+                       e-commerce, intranet, application mobile</p>
+                 </div>
+       
+                   <div class="hidden-text">
+                       <h1>INTÉGRATION WEB</h1>
+                      
+                       <p >Implémentations HTML / CSS <br> conformes aux standards du Web.</p>
+                    </div>
+       
+                      <div class="hidden-text">
+                       <h1 >DÉVELOPPEMENTS PERSONALISER</h1>
+                       <p >Des services alignés à votre secteur d’activité, <br> programmes & outils sur mesure.</p>
+                      </div>
+       
+                      <div class="hidden-text">
+                        <h1>SEO NATUREL</h1>
+                        <p >Contenu bien structuré pour des <br> pages claires et un référencement efficace.</p>
+                      </div>
         </div>
-        <div class="liste">
-            <div class="liste1">
-             <li>
-                <div class="para1">
-                    <div class="icon">
-                        <i class="fa-regular fa-lightbulb"></i>
-                    </div>
-                    <div class="text">
-                        <h1>GESTION DE PROJETS WEB</h1>
-                      <p>Site vitrine, corporate, évènementiel, <br>
-                         e-commerce, intranet, application mobile.</p>
-                    </div>
-                </div>
-        
-             </li>
+           
+               
+               <div class="image"><img src="/image/two-phone-mockup-no-background-free-png-removebg-preview.png" alt=""></div>
+            <div class="text2">
+                <div class="hidden-text">
+                    <h1 >CRÉATION GRAPHIQUE & WEBDESIGN</h1>
+                   
+                    <p >Logos, templates Web, sites publicitaires, <br>
+                        cartes de visite, newsletters...</p>
+                 </div>
+
+                 <div class="hidden-text">
+                    <h1>RAPIDITÉ DES PAGES</h1>
+                   
+                    <p >Effets et animations visuels subtils <br>  pour enrichir votre projet.</p>
+                 </div>
+
+                 <div class="hidden-text">
+                    <h1 >PANEL D'ADMINISTRATION</h1>
+                   
+                    <p >Des outils dédiés pour optimiser le <br> bon fonctionnement de votre entreprise.</p>
+                 </div>
+
+                 <div class="hidden-text">
+                    <h1 >RESPONSIVE DESIGN</h1>
+                   
+                    <p >Compatible tous supports, tablette & <br> application mobile.</p>
+                 </div>
             </div>
-         </div>
+              
+        </div>
     </section>
+    
+  <script>
+    function checkVisibility() {
+    const elements = document.querySelectorAll('.services');
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const windowHeight = window.innerHeight;
+
+    elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top + scrollTop;
+
+        if (scrollTop + windowHeight > elementTop) {
+            if (!element.classList.contains('visible')) {
+                console.log('Element is becoming visible:', element);
+            }
+            element.classList.add('visible');
+        }
+    });
+}
+
+// Appel de la fonction lors du chargement de la page
+window.addEventListener('load', checkVisibility);
+
+// Appel de la fonction lors du défilement
+window.addEventListener('scroll', checkVisibility);
+
+  </script>
+    
 </body>
 </html>
