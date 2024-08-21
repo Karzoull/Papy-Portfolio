@@ -326,7 +326,7 @@ header nav.show {
 .services {
     padding: 50px 0;
     background-color: #f9f9f9;
-    height: 85vh;
+    height: 100vh;
 }
 
 .services .contend_text {
@@ -409,3 +409,141 @@ header nav.show {
     border-radius: 40px;
     padding: 30px 130px;
 }
+
+
+@media only screen and (max-width: 1440px){
+    .services  {
+        margin-top: -55px;
+    }
+
+    
+}
+
+@media only screen and (max-width: 1024px) {
+    .services .image img{
+        display: none; /* Masquer l'image quand l'écran est raccourci */
+    }
+
+    .services_content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services .text_info {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+    }
+
+    .services .hidden-text {
+        margin-bottom: 20px;
+        width: 100%; 
+    }
+
+    .services .text1 {
+        order: 1; 
+    }
+
+    .services .text2 {
+        order: 2;
+        text-align: center;
+    }
+
+    .services .contend_text h1 {
+        font-size: 35px; 
+    }
+
+    .services .contend_text p,
+    .services .hidden-text h1,
+    .services .hidden-text p {
+        font-size: 18px; 
+    }
+}
+
+/* Pour les très petits écrans (smartphones) */
+@media only screen and (max-width: 768px) {
+    .services  {
+        margin-top: -10px;
+    }
+
+    .services .contend_text h1 {
+        font-size: 28px; /* Réduire encore la taille du titre */
+    }
+
+    .services .contend_text p,
+    .services .hidden-text h1,
+    .services .hidden-text p {
+        font-size: 16px;
+    }
+
+    .services .hidden-text {
+        padding: 15px; 
+        margin: 10px 0; 
+    }
+
+    .services .text1 {
+        padding: 30px 110px;
+    }
+
+    .services .text2 {
+        margin-top: 50px;
+    }
+}
+
+
+/* Pour les très petits écrans (petits smartphones) */
+@media only screen and (max-width: 480px) {
+    .services .contend_text h1 {
+        font-size: 30px; 
+    }
+
+    .services .contend_text p {
+        padding-top:1px;
+    }
+    .services .hidden-text h1,
+    .services .hidden-text p {
+        font-size: 14px; 
+        padding-top: 10px;
+
+    .services .hidden-text {
+        padding-top: 20px; 
+        padding-left: 50px; 
+    }
+}
+
+.services .text1 {
+    padding: 30px 110px;
+}
+
+.services .text2 {
+    margin-top: 50px;
+    padding: 30px 110px;
+}
+
+.services .contend_text p::after {
+    content: "";
+    display: block;
+    width: 10%; 
+    height: 5px;
+    background-color: #E74C3C;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+ }
+
+ .responsive {
+    height: 50vh;
+    margin-top: 100px;
+ }
+
+ .responsive .fond img {
+    width: 80%;
+    object-fit: cover;
+    transform: scale(1.5); /* Zoomer à 120% */
+  transform-origin: bottom; /* Point de transformation au centre */
+  height: 360px;
+  filter: brightness(35%);
+ }
