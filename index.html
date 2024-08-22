@@ -13,6 +13,7 @@
         <div class="fond">
             <img src="image/DALL·E 2024-08-17 06.31.51 - A top-down view of a very dark workspace with a sleek, minimalist setup. The scene includes a closed laptop, a monitor, and a mouse on a dark desk. Th.png" alt="">
             <div class="text">
+                <p class="name">By Papy</p>
                 <h1>DEVELOPPEUR <span class="span">-</span>INFORMATIQUE <br> WEB</h1>
                 <p>E-Commerce , Portfolio , Site Vitrine</p>
             </div>
@@ -30,10 +31,19 @@
             </ul>
         </nav>
         
-        <div class="scroll-button" >
-            <a href="#service"><i class="chevron-down"></i></a>
+        <div class="scroll-button" onclick="scrollToSection('#service')">
+            <i class="chevron-down"></i>
         </div>
     </header>
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.querySelector(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        </script>
+        
     <script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
     
     <script src="script.js"></script>
@@ -133,9 +143,7 @@ window.addEventListener('scroll', checkVisibility);
 
   </script>
 <section class="responsive">
-    <div class="fond">
-        <img src="image/DALL·E 2024-08-17 06.31.51 - A top-down view of a very dark workspace with a sleek, minimalist setup. The scene includes a closed laptop, a monitor, and a mouse on a dark desk. Th.png" alt="" >
-    </div>
+    
 </section>
 </body>
 </html>

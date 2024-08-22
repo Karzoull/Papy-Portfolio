@@ -46,7 +46,7 @@ header .fond .text {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: -620px;
+    margin-top: -650px;
     padding: 0 20px;
 }
 
@@ -57,7 +57,6 @@ header .fond .text p{
     word-spacing: 10px;
     margin-left: -15px;
 }
-
 
 header .fond .text h1 {
     color: white;
@@ -93,7 +92,7 @@ header nav {
 
 header nav ul {
     display: flex;
-    margin-top: -645px;
+    margin-top: -655px;
 }
 
 header nav ul li {
@@ -118,6 +117,9 @@ header nav ul li a {
 
 header nav ul li a:hover {
     color: #e95f50;
+    border-bottom: 3px solid;
+    
+    
 }
 
 header .logo img {
@@ -290,39 +292,6 @@ header nav.show {
 
 }
 
-/* Ajustements pour les petits écrans (smartphones) */
-@media only screen and (max-width: 768px) {
-    header .fond .text {
-        text-align: center;
-    }
-
-    header .fond .text h1 {
-        font-size: 50px;
-    }
-
-    header nav ul {
-        top: 10px;
-    }
-   
-}
-
-/* Pour les très petits écrans (petits smartphones) */
-@media only screen and (max-width: 480px) {
-    header .fond .text h1 {
-        font-size: 45px;
-    }
-
-    header .fond .text p {
-        font-size: 15px;
-    }
-
-    header nav ul {
-        top: 10px;
-    }
-  
-}
-
-
 .services {
     padding: 50px 0;
     background-color: #f9f9f9;
@@ -411,17 +380,9 @@ header nav.show {
 }
 
 
-@media only screen and (max-width: 1440px){
-    .services  {
-        margin-top: -55px;
-    }
-
-    
-}
-
 @media only screen and (max-width: 1024px) {
     .services .image img{
-        display: none; /* Masquer l'image quand l'écran est raccourci */
+        display: none; 
     }
 
     .services_content {
@@ -448,6 +409,8 @@ header nav.show {
     .services .text2 {
         order: 2;
         text-align: center;
+        padding: 30px 130px;
+        margin-top: 50px;
     }
 
     .services .contend_text h1 {
@@ -459,16 +422,30 @@ header nav.show {
     .services .hidden-text p {
         font-size: 18px; 
     }
+
+    
 }
 
-/* Pour les très petits écrans (smartphones) */
 @media only screen and (max-width: 768px) {
+
+    header .fond .text {
+        text-align: center;
+    }
+
+    header .fond .text h1 {
+        font-size: 50px;
+    }
+
+    header nav ul {
+        top: 10px;
+    }
+
     .services  {
         margin-top: -10px;
     }
 
     .services .contend_text h1 {
-        font-size: 28px; /* Réduire encore la taille du titre */
+        font-size: 28px; 
     }
 
     .services .contend_text p,
@@ -492,8 +469,21 @@ header nav.show {
 }
 
 
-/* Pour les très petits écrans (petits smartphones) */
+
 @media only screen and (max-width: 480px) {
+
+    header .fond .text h1 {
+        font-size: 42px;
+    }
+
+    header .fond .text p {
+        font-size: 15px;
+    }
+
+    header nav ul {
+        top: 10px;
+    }
+
     .services .contend_text h1 {
         font-size: 30px; 
     }
@@ -513,12 +503,12 @@ header nav.show {
 }
 
 .services .text1 {
-    padding: 30px 110px;
+    padding: 60px 1px;
 }
 
 .services .text2 {
     margin-top: 50px;
-    padding: 30px 110px;
+    padding: 40px 20px;
 }
 
 .services .contend_text p::after {
@@ -532,18 +522,10 @@ header nav.show {
     left: 50%;
     transform: translateX(-50%);
 }
+
+
  }
 
- .responsive {
-    height: 50vh;
-    margin-top: 100px;
- }
-
- .responsive .fond img {
-    width: 80%;
-    object-fit: cover;
-    transform: scale(1.5); /* Zoomer à 120% */
-  transform-origin: bottom; /* Point de transformation au centre */
-  height: 360px;
-  filter: brightness(35%);
- }
+ 
+ 
+ 
