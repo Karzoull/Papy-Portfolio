@@ -822,7 +822,7 @@ opacity: 1;
 @media only screen and (max-width: 1080px){
     .responsive .responsive_contend {
         position: absolute;
-        top: 20%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%); 
         text-align: center;
