@@ -20,3 +20,5 @@ window.addEventListener('load', checkVisibility);
 
 // Appel de la fonction lors du défilement
 window.addEventListener('scroll', checkVisibility);
+
+

@@ -9,6 +9,13 @@
     <title>Portfolio</title>
 </head>
 <body>
+    <div id="preloader">
+        <div class="loader">
+            <img src="image/pixelcut-export.jpg" alt="Logo" class="rotating-image">
+
+        </div>
+    </div>
+    <script src="loader.js"></script>
     <header>
         <div class="fond">
             <img src="image/DALL·E 2024-08-17 06.31.51 - A top-down view of a very dark workspace with a sleek, minimalist setup. The scene includes a closed laptop, a monitor, and a mouse on a dark desk. Th.png" alt="">
@@ -21,18 +28,20 @@
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
-        <nav>
-            <ul id="menuList">
-                <li><a href="#" class="icon"><i class="fa-solid fa-house"></i></a></li>
-                <li><a href="#service">SERVICES</a></li>
-                <li><a href="#">COMPETENCES</a></li>
-                <li><a href="#">À PROPOS</a></li>
-                <li><a href="#">CONTACT</a></li>
-            </ul>
-        </nav>
-        
-        <div class="scroll-button" onclick="scrollToSection('#service')">
-            <i class="chevron-down"></i>
+        <div class="navbar"> 
+            <nav>
+                <ul id="menuList">
+                    <li><a href="#" class="icon"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="#service">SERVICES</a></li>
+                    <li><a href="#compétence">COMPETENCES</a></li>
+                    <li><a href="#">À PROPOS</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+            
+            <div class="scroll-button" onclick="scrollToSection('#service')">
+                <i class="chevron-down"></i>
+            </div>
         </div>
     </header>
     <script>
@@ -50,7 +59,7 @@
     <script>
        document.querySelector('.menu-icon').addEventListener('click', function() { 
     const nav = document.querySelector('header nav');
-    nav.classList.toggle('show'); // Ajoute ou retire la classe 'show'
+    nav.classList.toggle('show'); 
 });
     </script> 
     
@@ -146,10 +155,60 @@ window.addEventListener('scroll', checkVisibility);
     <div class="fond">
         <img src="image/pixelcut-export.png" alt="">
     </div>
-    <div class="contend">
+    <div class="responsive_contend">
         <p>Compatible Mobile, Tablettes & PC</p>
         <h1>Développement Web Responsive</h1>
     </div>
 </section>
+<section class="compétence">
+     <div class="contend">
+        <div class="compétence_text">
+            <h1>SKILLS</h1>
+            <p>Des skills mises à votre service.</p>
+        </div>
+     </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const elements = document.querySelectorAll('.compétence_text');
+     
+        function checkVisibility() {
+            const windowHeight = window.innerHeight;
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                if (elementTop < windowHeight) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        checkVisibility();
+        window.addEventListener('scroll', checkVisibility);
+        window.addEventListener('load', checkVisibility);
+        
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const elements = document.querySelectorAll('.responsive_contend');
+     
+        function checkVisibility() {
+            const windowHeight = window.innerHeight;
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                if (elementTop < windowHeight) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        checkVisibility();
+        window.addEventListener('scroll', checkVisibility);
+        window.addEventListener('load', checkVisibility);
+        
+    });
+</script>
 </body>
 </html>
