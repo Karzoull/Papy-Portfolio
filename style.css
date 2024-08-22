@@ -271,7 +271,7 @@ header nav.show {
     
     header nav ul li a {
         color: white;
-        font-size: 24px;
+        font-size: 18px;
         padding: 10px;
     }
 
@@ -507,6 +507,19 @@ header nav.show {
 
 
 @media only screen and (max-width: 480px) {
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 18px;
+        right: 0px;
+        z-index: 3;
+        cursor: pointer;
+    }
+    
+    .menu-icon i {
+        font-size: 35PX;
+    }
+
 
     header .fond .text h1 {
         font-size: 42px;
@@ -804,4 +817,23 @@ opacity: 1;
         margin-top: 40px;
     }
     
+}
+
+@media only screen and (max-width: 480px){
+    .responsive .responsive_contend {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        text-align: center;
+    }
+    
+    .responsive .responsive_contend p{
+        font-size: 10px;
+    }
+    
+    .responsive .responsive_contend h1 {
+        font-size: 15px;
+        padding-top: 15px;
+    }
 }
