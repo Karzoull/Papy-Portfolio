@@ -109,17 +109,13 @@ header nav ul li a {
     color: white;
     font-size: 16px;
     font-weight: 600;
-    padding: 10px 45px;
+    padding: 0px 45px;
     letter-spacing: 5px;
     transition: color 0.5s ease;
-   
 }
 
 header nav ul li a:hover {
     color: #e95f50;
-    border-bottom: 3px solid;
-    
-    
 }
 
 header .logo img {
@@ -344,7 +340,7 @@ header nav.show {
 
 .services   {
     opacity: 0;
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    transition: opacity 2s ease-out, transform 2s ease-out;
 }
 
 .services.visible {
@@ -376,7 +372,7 @@ header nav.show {
     border: 2px solid;
     border-color: black;
     border-radius: 40px;
-    padding: 30px 130px;
+    padding: 30px 120px;
 }
 
 
@@ -526,6 +522,94 @@ header nav.show {
 
  }
 
- 
- 
- 
+
+.responsive {
+    position: relative;
+    margin-top: -50px;
+}
+
+.responsive .fond img{
+        width:66.7%;
+        transform: scale(1.5);
+        transform-origin: bottom;
+        object-fit: cover;
+        height: 150px;
+        display: block;
+    margin: 0 auto; 
+}
+
+
+.responsive .contend {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    text-align: center;
+}
+
+.responsive .contend p,
+.responsive .contend h1 {
+    color: white;
+}
+
+.responsive .contend p{
+    font-size: 20px;
+}
+
+.responsive .contend h1 {
+    font-size: 45px;
+    padding-top: 10px;
+}
+
+
+/* Media query pour les smartphones de taille moyenne */
+@media only screen and (max-width: 768px) {
+    .services {
+        margin-bottom: 30px; 
+    }
+
+    .responsive {
+        margin-top: 400px; 
+    }
+
+    .responsive .fond img {
+        height: 120px; 
+    }
+
+    .responsive .contend h1 {
+        font-size: 28px;
+    }
+
+    .responsive .contend p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .services {
+        margin-bottom: 20px; 
+    }
+
+    .responsive {
+        margin-top: 700px; 
+    }
+
+    .responsive .fond img {
+        height: 100px; 
+    }
+
+    .responsive .contend h1 {
+        font-size: 20px;
+    }
+
+    .responsive .contend p {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (width:393px) {
+    .responsive {
+        margin-top: 750px; 
+    }
+}
+
