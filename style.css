@@ -819,16 +819,3 @@ opacity: 1;
     
 }
 
-@media only screen and (max-width:360px){
-    .responsive {
-        margin-top: 820px;
-    }
-
-    .responsive .responsive_contend h1 {
-        font-size: 19px;
-    }
-
-    .responsive .responsive_contend P {
-        font-size: 10px;
-    }
-}
