@@ -819,10 +819,14 @@ opacity: 1;
     
 }
 
-@media only screen and (max-width: 1080px){
+@media only screen and (width: 432px){
+        .responsive {
+            margin-top: 600px; 
+    }
+
     .responsive .responsive_contend {
         position: absolute;
-        top: 50%;
+        top: 30%;
         left: 50%;
         transform: translate(-50%, -50%); 
         text-align: center;
@@ -833,7 +837,7 @@ opacity: 1;
     }
     
     .responsive .responsive_contend h1 {
-        font-size: 15px;
+        font-size: 17px;
         padding-top: 15px;
     }
 }
