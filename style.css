@@ -827,7 +827,7 @@ opacity: 1;
     }
 
     .responsive {
-        margin-top: 20px; /* Assure que la section responsive commence juste après compétence */
+        margin-top: 200px; /* Assure que la section responsive commence juste après compétence */
     }
 
     .responsive .fond img {
@@ -835,7 +835,7 @@ opacity: 1;
     }
 
     .responsive .responsive_contend h1 {
-        font-size: 20px; /* Ajuste la taille du texte pour être lisible sur ce viewport */
+        font-size: 10px; /* Ajuste la taille du texte pour être lisible sur ce viewport */
     }
 
     .responsive .responsive_contend p {
