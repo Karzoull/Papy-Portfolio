@@ -821,7 +821,7 @@ opacity: 1;
 
 @media only screen and (width: 432px){
         .responsive {
-            margin-top: 600px; 
+            margin-top: 900px; 
     }
 
     .responsive .responsive_contend {
@@ -833,11 +833,11 @@ opacity: 1;
     }
     
     .responsive .responsive_contend p{
-        font-size: 10px;
+        font-size: 5px;
     }
     
     .responsive .responsive_contend h1 {
-        font-size: 17px;
+        font-size: 10px;
         padding-top: 15px;
     }
 }
