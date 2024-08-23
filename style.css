@@ -821,14 +821,14 @@ opacity: 1;
 
 @media only screen and (width:432px){
     .responsive {
-        margin-top: 600px;
+        margin-top: 500px;
     }
 
     .responsive .responsive_contend h1 {
-        font-size: 17px;
+        font-size: 20px;
     }
 
     .responsive .responsive_contend P {
-        font-size: 12px;
+        font-size: 15px;
     }
 }
