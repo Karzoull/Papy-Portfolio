@@ -819,7 +819,7 @@ opacity: 1;
     
 }
 
-@media only screen and (width: 432px){
+@media only screen and (width: 480px){
         .responsive {
             margin-top: 900px; 
     }
@@ -833,11 +833,11 @@ opacity: 1;
     }
     
     .responsive .responsive_contend p{
-        font-size: 5px;
+        font-size: 10px;
     }
     
     .responsive .responsive_contend h1 {
-        font-size: 10px;
+        font-size: 15px;
         padding-top: 15px;
     }
 }
