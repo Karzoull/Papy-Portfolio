@@ -819,3 +819,26 @@ opacity: 1;
     
 }
 
+@media only screen and (max-width: 393px) {
+   
+
+    .compétence {
+        margin-bottom: 50px; /* Assure un espacement suffisant après la section compétence */
+    }
+
+    .responsive {
+        margin-top: 20px; /* Assure que la section responsive commence juste après compétence */
+    }
+
+    .responsive .fond img {
+        height: 120px; /* Ajuste la hauteur de l'image */
+    }
+
+    .responsive .responsive_contend h1 {
+        font-size: 20px; /* Ajuste la taille du texte pour être lisible sur ce viewport */
+    }
+
+    .responsive .responsive_contend p {
+        font-size: 12px; /* Ajuste la taille du texte pour être lisible sur ce viewport */
+    }
+}
