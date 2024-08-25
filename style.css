@@ -785,7 +785,7 @@ header nav.show {
 }
 
 .compétence {
-    height: 100vh;
+    height: 120vh;
 }
 
 .compétence .compétence_text {
@@ -1047,7 +1047,7 @@ opacity: 1;
 .contend_chart {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 3s ease-out, transform 3s ease-out;
+    transition: opacity 2s ease-out, transform 2s ease-out;
 }
 
 .contend_chart.visible {
