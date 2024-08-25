@@ -168,21 +168,6 @@ window.addEventListener('scroll', checkVisibility);
         <h1>Développement Web Responsive</h1>
     </div>
 </section>
-<section class="compétence" id="compétence">
-     <div class="contend">
-        <div class="compétence_text">
-            <h1>SKILLS</h1>
-            <p>Des skills mises à votre service.</p>
-        </div>
-     </div>
-    <div class="contend_chart">
-        <div class="chart">
-            <div class="cercle-progression">
-                <span>65%</span>
-            </div>
-        </div>
-    </div>
-</section>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -225,5 +210,92 @@ window.addEventListener('scroll', checkVisibility);
         
     });
 </script>
+
+<section class="compétence" id="compétence">
+     <div class="contend">
+        <div class="compétence_text">
+            <h1>SKILLS</h1>
+            <p>Des skills mises à votre service.</p>
+        </div>
+     </div>
+    <div class="contend_chart">
+       <div class="carte">
+          <h1>HTML</h1>
+           <div class="cercle-progression">
+              <span>100%</span>
+            </div>
+            <img class="logo-html" src="images icons/icons8-html-5-48.png" alt="Logo HTML">
+       </div>
+
+       <div class="carte">
+        <h1>CSS</h1>
+         <div class="cercle-progression">
+            <span>100%</span>
+          </div>
+          <img class="logo-html" src="images icons/file (1).png" alt="Logo HTML">
+     </div>
+
+       <div class="carte">
+        <h1>Java Script</h1>
+         <div class="cercle-progression">
+            <span>100%</span>
+          </div>
+          <img class="logo-html" src="images icons/js.png" alt="Logo HTML">
+        </div>
+
+        <div class="carte">
+            <h1>Vue.Js</h1>
+             <div class="cercle-progression">
+                <span>100%</span>
+              </div>
+              <img class="logo-html" src="images icons/vue.png" alt="Logo HTML">
+         </div>
+
+        <div class="carte">
+            <h1>MySQL</h1>
+             <div class="cercle-progression">
+                <span>100%</span>
+              </div>
+              <img class="logo-html" src="images icons/mysql.png" alt="Logo HTML">
+        </div>
+
+        <div class="carte">
+            <h1>MongoDB</h1>
+             <div class="cercle-progression">
+                <span>100%</span>
+              </div>
+              <img class="logo-html" src="images icons/Mongo.png" alt="Logo HTML">
+        </div>
+
+        <div class="carte">
+            <h1>Node.Js</h1>
+             <div class="cercle-progression">
+                <span>100%</span>
+              </div>
+              <img class="logo-html" src="images icons/node.png" alt="Logo HTML">
+        </div>
+    </div>
+</section>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const elements = document.querySelectorAll('.contend_chart');
+     
+        function checkVisibility() {
+            const windowHeight = window.innerHeight;
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                if (elementTop < windowHeight) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        checkVisibility();
+        window.addEventListener('scroll', checkVisibility);
+        window.addEventListener('load', checkVisibility);
+        
+    });
+</script>
+<script src="carte.js"></script>
 </body>
 </html>
