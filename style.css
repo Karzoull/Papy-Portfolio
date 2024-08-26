@@ -1012,6 +1012,10 @@ opacity: 1;
     width: 100px;
 } 
 
+.carte:nth-child(3) .logo-html {
+    width: 65px;
+}
+
 .contend_chart {
     opacity: 0;
     transform: translateY(-100px);
