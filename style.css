@@ -888,7 +888,11 @@ opacity: 1;
     
 }
 
-
+@media only screen and (max-width:700px){
+    .responsive {
+        margin-top: 550px;
+    }
+}
 @media only screen and (max-width:393px){
     .responsive .responsive_contend {
         position: absolute;
@@ -975,7 +979,6 @@ opacity: 1;
     position: relative;
     width: 100px;
     height: 100px;
-    border-radius: 50%;
     background-color: white;
     display: flex;
     align-items: center;
