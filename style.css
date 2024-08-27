@@ -779,7 +779,8 @@ header nav.show {
 }
 
 .compétence {
-    height: 110vh;
+      padding-top: 10px;
+    padding-bottom: 100px;
 }
 
 .compétence .compétence_text {
@@ -941,7 +942,7 @@ opacity: 1;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    margin-top: 130px;
+    margin-top: 100px;
     margin-left: 150px;
     text-align: center;
     transform-style: preserve-3d;
@@ -1010,7 +1011,7 @@ opacity: 1;
 .compétence {
     opacity: 0;
     transform: translateY(-100px);
-    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     will-change: opacity, transform;
 }
 
@@ -1025,11 +1026,10 @@ opacity: 1;
     align-items: center;
     text-align: center;
     flex-wrap: wrap;
-    height: 100vh;
 }
 
 .short .background {
-    margin-top: 280px;
+    margin-top: 220px;
 }
 
 .short .background img{
@@ -1051,6 +1051,7 @@ opacity: 1;
     font-size: 46px;
     color: white;
     font-weight: 600;
+   
 }
 
 .info {
@@ -1095,4 +1096,84 @@ opacity: 1;
     color: white;
     font-size: 15px;
     font-weight: 500;
+}
+
+@media screen and (max-width:1024px) {
+
+    .short .background .containe h1 {
+        font-size: 2rem;
+        color: white;
+        font-weight: 600;
+    }
+
+    .short .background {
+        margin-top: 320px;
+    }
+    
+    .short .background img {
+        height: 630px;
+        width: 100%;
+    }
+
+    .short .background .containe {
+        margin-top: -900px;
+    }
+
+    .info {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        gap: 100px;
+        margin-top: 80px;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (width:768px){
+    .short .background {
+       margin-top: 150px;
+    }
+    .short .background img {
+        height: 350px;
+    }
+
+    .short .background .containe {
+        margin-top: -500px;
+    }
+
+    .info {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        gap: 80px;
+        margin-top: 80px;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width:480px){
+    .short .background .containe h1 {
+        font-size: 1.7rem;
+        color: white;
+        font-weight: 600;
+    }
+
+    .short .background img {
+        height: 600px;
+    }
+
+    .short .background .containe {
+        margin-top: -850px;     
+    }
+}
+
+.short {
+    opacity: 0;
+    filter: blur(10px);
+    transition: opacity 0.6s ease-out, filter 0.6s ease-out;
+}
+
+.short.visible {
+    opacity: 1;
+    filter: blur(0);
 }
