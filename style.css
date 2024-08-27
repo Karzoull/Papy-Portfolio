@@ -811,16 +811,7 @@ header nav.show {
 } 
 
 
-.compétence_text{
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
 
-.compétence_text.visible {
-opacity: 1;
- transform: translateY(0);
-}
 
 .responsive_contend {
             opacity: 0;
@@ -1013,17 +1004,95 @@ opacity: 1;
 } 
 
 .carte:nth-child(3) .logo-html {
-    width: 65px;
+    width: 68 px;
 }
 
-.contend_chart {
+.compétence {
     opacity: 0;
     transform: translateY(-100px);
     transition: opacity 1.5s ease-out, transform 1.5s ease-out;
     will-change: opacity, transform;
 }
 
-.contend_chart.visible {
+.compétence.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.short {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.short .background {
+    margin-top: 280px;
+}
+
+.short .background img{
+    width:60.7%;
+    transform: scale(1.5);
+    transform-origin: bottom;
+    object-fit:cover;
+    height: 300px;
+    filter: brightness(30%);
+    background-size: cover;
+}
+
+.short .background .containe {
+    position: relative;
+    margin-top: -400px;
+}
+
+.short .background .containe h1 {
+    font-size: 46px;
+    color: white;
+    font-weight: 600;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 100px;
+    margin-top: 80px;
+    flex-wrap: wrap;
+}
+
+.notification {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+}
+
+.notification .badge {
+    position: absolute;
+    top: 35px;
+    left: -15px;
+    background-color: #ee3f2b;
+    color: white;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 15px;
+}
+
+.notification .icon i{
+  margin-top: 40px;
+  font-size: 30px;
+}
+
+.notification p {
+    margin-top: 50px;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
 }

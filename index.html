@@ -168,26 +168,7 @@ window.addEventListener('scroll', checkVisibility);
     </div>
 </section>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const elements = document.querySelectorAll('.compétence_text');
-     
-        function checkVisibility() {
-            const windowHeight = window.innerHeight;
-            elements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                if (elementTop < windowHeight) {
-                    element.classList.add('visible');
-                }
-            });
-        }
 
-        checkVisibility();
-        window.addEventListener('scroll', checkVisibility);
-        window.addEventListener('load', checkVisibility);
-        
-    });
-</script>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -273,11 +254,19 @@ window.addEventListener('scroll', checkVisibility);
             </div>
               <img class="logo-html" src="images icons/node.png" alt="Logo HTML">
         </div>
+
+        <div class="carte">
+            <h1>GIT</h1>
+            <div class="cercle-progression">
+                <img src="images icons/pixelcut-export.png" alt=""> 
+            </div>
+              <img class="logo-html" src="images icons/Git_icon.svg-removebg-preview.png" alt="Logo HTML">
+        </div>
     </div>
 </section>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const elements = document.querySelectorAll('.contend_chart');
+        const elements = document.querySelectorAll('.compétence');
      
         function checkVisibility() {
             const windowHeight = window.innerHeight;
@@ -295,6 +284,51 @@ window.addEventListener('scroll', checkVisibility);
         
     });
 </script>
+<section class="short">
+    <div class="background">
+        <img src="image/DALL·E 2024-08-17 06.31.51 - A top-down view of a very dark workspace with a sleek, minimalist setup. The scene includes a closed laptop, a monitor, and a mouse on a dark desk. Th.png" alt="">
+        <div class="containe">
+            <h1>❝ Développeur Informatique Indépendant ❞</h1>
+            <div class="info">
+               <div class="notification">
+                  <div class="badge">1</div>
+                  <div class="icon"><i class="fa-solid fa-mug-saucer"></i></div>
+                  <p>CAFÉ</p>
+                </div>
+
+                <div class="notification">
+                    <div class="badge">2</div>
+                    <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <p>ANALYSE</p>
+                </div>
+
+                <div class="notification">
+                    <div class="badge">3</div>
+                    <div class="icon"><i class="fa-solid fa-brush"></i></div>
+                    <p>DESIGN</p>
+                </div>
+
+                <div class="notification">
+                    <div class="badge">4</div>
+                    <div class="icon"><i class="fa-solid fa-code"></i></div>
+                    <p>CODE</p>
+                </div>
+
+                <div class="notification">
+                    <div class="badge">5</div>
+                    <div class="icon"><i class="fa-solid fa-bug"></i></div>
+                    <p>TESTS</p>
+                </div>
+
+                <div class="notification">
+                    <div class="badge">6</div>
+                    <div class="icon"><i class="fa-solid fa-share-from-square"></i></div>
+                    <p>LIVRAISON</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <script src="carte.js"></script>
 </body>
 </html>
