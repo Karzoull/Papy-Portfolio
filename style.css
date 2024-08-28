@@ -1183,6 +1183,8 @@ opacity: 1;
     height: 100vh;
     text-align: center;
     flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
 }
 
 .projets .proj_contend h1{
