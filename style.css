@@ -1026,6 +1026,7 @@ opacity: 1;
     align-items: center;
     text-align: center;
     flex-wrap: wrap;
+    height: 35vh;
 }
 
 .short .background {
@@ -1177,3 +1178,32 @@ opacity: 1;
     opacity: 1;
     filter: blur(0);
 }
+
+.projets {
+    height: 100vh;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.projets .proj_contend h1{
+    color: #222222;
+    font-size: 45px;
+}
+
+.projets .proj_contend p {
+     color: #8F8F8F;
+    font-size: 30px;
+    position: relative;
+}
+
+.projets .proj_contend p::after { 
+    content: "";
+    display: block;
+    width: 3%; 
+    height: 5px;
+    background-color: #E74C3C;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+} 
