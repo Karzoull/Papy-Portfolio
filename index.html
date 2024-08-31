@@ -132,32 +132,6 @@
               
         </div>
     </section>
-    
-  <script>
-    function checkVisibility() {
-    const elements = document.querySelectorAll('.services');
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const windowHeight = window.innerHeight;
-
-    elements.forEach(element => {
-        const elementTop = element.getBoundingClientRect().top + scrollTop;
-
-        if (scrollTop + windowHeight > elementTop) {
-            if (!element.classList.contains('visible')) {
-                console.log('Element is becoming visible:', element);
-            }
-            element.classList.add('visible');
-        }
-    });
-}
-
-
-window.addEventListener('load', checkVisibility);
-
-
-window.addEventListener('scroll', checkVisibility);
-
-  </script>
 <section class="responsive">
     <div class="fond">
         <img src="image/pixelcut-export.png" alt="">
@@ -167,30 +141,6 @@ window.addEventListener('scroll', checkVisibility);
         <h1>Développement Web Responsive</h1>
     </div>
 </section>
-
-
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const elements = document.querySelectorAll('.responsive_contend');
-     
-        function checkVisibility() {
-            const windowHeight = window.innerHeight;
-            elements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                if (elementTop < windowHeight) {
-                    element.classList.add('visible');
-                }
-            });
-        }
-
-        checkVisibility();
-        window.addEventListener('scroll', checkVisibility);
-        window.addEventListener('load', checkVisibility);
-        
-    });
-</script>
-
 <section class="compétence" id="compétence">
      <div class="contend">
         <div class="compétence_text">
@@ -264,26 +214,6 @@ window.addEventListener('scroll', checkVisibility);
         </div>
     </div>
 </section>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const elements = document.querySelectorAll('.compétence');
-     
-        function checkVisibility() {
-            const windowHeight = window.innerHeight;
-            elements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                if (elementTop < windowHeight) {
-                    element.classList.add('visible');
-                }
-            });
-        }
-
-        checkVisibility();
-        window.addEventListener('scroll', checkVisibility);
-        window.addEventListener('load', checkVisibility);
-        
-    });
-</script>
 <section class="short">
     <div class="background">
         <img src="image/DALL·E 2024-08-17 06.31.51 - A top-down view of a very dark workspace with a sleek, minimalist setup. The scene includes a closed laptop, a monitor, and a mouse on a dark desk. Th.png" alt="">
@@ -348,11 +278,108 @@ window.addEventListener('scroll', checkVisibility);
         window.addEventListener('load', checkVisibility);
         
     });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const elements = document.querySelectorAll('.projets');
+     
+        function checkVisibility() {
+            const windowHeight = window.innerHeight;
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                if (elementTop < windowHeight) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        checkVisibility();
+        window.addEventListener('scroll', checkVisibility);
+        window.addEventListener('load', checkVisibility);
+        
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const elements = document.querySelectorAll('.compétence');
+     
+        function checkVisibility() {
+            const windowHeight = window.innerHeight;
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                if (elementTop < windowHeight) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        checkVisibility();
+        window.addEventListener('scroll', checkVisibility);
+        window.addEventListener('load', checkVisibility);
+        
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const elements = document.querySelectorAll('.responsive_contend');
+     
+        function checkVisibility() {
+            const windowHeight = window.innerHeight;
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                if (elementTop < windowHeight) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        checkVisibility();
+        window.addEventListener('scroll', checkVisibility);
+        window.addEventListener('load', checkVisibility);
+        
+    });
+
+    function checkVisibility() {
+    const elements = document.querySelectorAll('.services');
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const windowHeight = window.innerHeight;
+
+    elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top + scrollTop;
+
+        if (scrollTop + windowHeight > elementTop) {
+            if (!element.classList.contains('visible')) {
+                console.log('Element is becoming visible:', element);
+            }
+            element.classList.add('visible');
+        }
+    });
+}
+
+
+window.addEventListener('load', checkVisibility);
+
+
+window.addEventListener('scroll', checkVisibility);
+    
 </script>
 <section class="projets">
     <div class="proj_contend">
-        <h1>MES PROJETS</h1>
+        <h1>MON PROJET</h1>
         <p>Certains projets sur lesquels j'ai travaillé</p>
+    </div>
+    <div class="card_contend">
+            <div class="card">
+               <a href="https://rdvbussines.goodbarber.app"><img src="image/pc.png" alt="" ></a>
+               <div class="contend_carte">
+                <h1>RENDEZ-VOUS D'AFFAIRES</h1>
+                <hr>
+                <h1 class="h1">DÉVELOPPEMENT WEB</h1>
+            </div>
+            </div>
+    </div>
+</section>
+<section class="propos">
+    <div class="contend">
+        <h1>À PROPOS</h1>
+        <p>Je suis concepteur web autonome et j'adore cela !</p>
     </div>
 </section>
 <script src="carte.js"></script>
