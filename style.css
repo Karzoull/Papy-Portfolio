@@ -1297,9 +1297,10 @@ opacity: 1;
 
 .propos {
     padding: 50px;
-    display: flex;
     justify-content: center;
     text-align: center;
+    flex-wrap: wrap;
+    height: 100vh;
 }
 
 .propos .contend h1 {
@@ -1368,4 +1369,47 @@ opacity: 1;
         justify-content: center;
         text-align: center;
     }
+}
+
+.propos .info {
+    padding-top: 80px;
+}
+
+.propos .info .img {
+    position: absolute;
+}
+
+.propos li {
+   display: flex; 
+   justify-content: center;
+   align-items: center;
+   color: #949494;
+   flex-wrap: wrap;
+}
+
+.propos .info p {
+    padding-top: 20px;
+}
+
+.propos .info_contend1{
+    text-align: center;
+    margin-left: 0px;
+}
+
+.propos .info_contend2{
+    text-align: center;
+    padding-left: 600px;
+}
+
+.propos .info_contend2 .space {
+    padding-top: 15px;
+}
+
+.propos .info_contend2 .space2 {
+    margin-top: -10px;
+    font-weight: 600;
+}
+
+.propos .info h1 {
+    font-weight: 500;
 }
