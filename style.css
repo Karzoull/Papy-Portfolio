@@ -1300,7 +1300,7 @@ opacity: 1;
     justify-content: center;
     text-align: center;
     flex-wrap: wrap;
-    height: 100vh;
+    
 }
 
 .propos .contend h1 {
@@ -1373,18 +1373,21 @@ opacity: 1;
 
 .propos .info {
     padding-top: 80px;
+    margin-left: -50px;
 }
 
 .propos .info .img {
     position: absolute;
 }
-
+.propos .info .img img{
+    height: 500px;
+}
 .propos li {
    display: flex; 
    justify-content: center;
    align-items: center;
    color: #949494;
-   flex-wrap: wrap;
+   flex-wrap: wrapgit ;
 }
 
 .propos .info p {
@@ -1413,3 +1416,61 @@ opacity: 1;
 .propos .info h1 {
     font-weight: 500;
 }
+
+.number {
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    justify-content: center;
+    .animate {
+      filter: url("#blurFilter");
+    }
+  
+   
+  
+    .separator {
+      opacity: 0;
+      transition: opacity 0.1s ease;
+  
+      &.show {
+        opacity: 1;
+      }
+    }
+  }
+  
+  .svgFilter {
+     display: block; width: 0; height: 0;
+  }
+  
+  .slider {
+    accent-color: black;
+    background: red;
+    min-width: min(20rem, 60vw);
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .numbers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   
+    padding: 1;
+    font-weight: 600;
+    color: #2A2A2A;
+  }
+
+  
+  :root {
+    --labs-sys-color-on-background: black;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
