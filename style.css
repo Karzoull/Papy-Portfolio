@@ -1215,7 +1215,7 @@ opacity: 1;
 
 @media screen and (max-width:480px){
     .projets {
-        padding-top: 330px;
+        padding-top: 380px;
     }
 
     .projets .proj_contend h1{
@@ -1373,12 +1373,8 @@ opacity: 1;
 
 .propos .info {
     padding-top: 80px;
-    margin-left: -50px;
 }
 
-.propos .info .img {
-    position: absolute;
-}
 .propos .info .img img{
     height: 500px;
 }
@@ -1387,7 +1383,7 @@ opacity: 1;
    justify-content: center;
    align-items: center;
    color: #949494;
-   flex-wrap: wrapgit ;
+   margin-top: -100px;
 }
 
 .propos .info p {
@@ -1396,12 +1392,11 @@ opacity: 1;
 
 .propos .info_contend1{
     text-align: center;
-    margin-left: 0px;
 }
 
 .propos .info_contend2{
     text-align: center;
-    padding-left: 600px;
+    margin-top: 10px;
 }
 
 .propos .info_contend2 .space {
@@ -1416,61 +1411,160 @@ opacity: 1;
 .propos .info h1 {
     font-weight: 500;
 }
+  
+  @media  screen and (max-width:1024px) {
+    .propos .info li{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+  }
 
-.number {
-    display: flex;
-    align-items: center;
-    font-size: 3rem;
-    justify-content: center;
-    .animate {
-      filter: url("#blurFilter");
+  @media  screen and (max-width:480px) {
+    .propos .info li{
+        flex-direction: column;
+        flex-wrap: wrap;
+    } 
+
+
+    .propos .info h1 {
+        font-weight: 500;
     }
-  
-   
-  
-    .separator {
-      opacity: 0;
-      transition: opacity 0.1s ease;
-  
-      &.show {
-        opacity: 1;
-      }
+
+    .propos .info .img img{
+        height: 100px;
+    }
+
+    .propos .contend {
+        margin-top: 490px;
     }
   }
-  
-  .svgFilter {
-     display: block; width: 0; height: 0;
+
+  @media  screen and (max-width:768px) {
+    .propos .info li{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .propos .info p {
+        font-size: 20px;
+    }
+
+    .propos .info h1 {
+        font-weight: 500;
+    }
+
+    .propos .info .img img{
+        height: 500px;
+    }
+
+    .propos .contend {
+        
+    }
   }
-  
-  .slider {
-    accent-color: black;
-    background: red;
-    min-width: min(20rem, 60vw);
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  .numbers{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-   
-    padding: 1;
+
+
+
+.délimitation{
+    position: relative;
+    margin-top: 100px;
+}
+
+.délimitation .fond img{
+        width:66.7%;
+        transform: scale(1.5);
+        transform-origin: bottom;
+        object-fit: cover;
+        height: 150px;
+        display: block;
+    margin: 0 auto; 
+}
+
+
+.délimitation .responsive_contend {
+    position: absolute;
+    top: 0%;
+    right: 22%;
+    text-align: center;
+}
+
+
+.délimitation .responsive_contend h1 {
+    color: white;
+}
+
+.délimitation .responsive_contend h1 {
+    font-size: 39px;
+    padding-top: 15px;
     font-weight: 600;
-    color: #2A2A2A;
-  }
+}
 
-  
-  :root {
-    --labs-sys-color-on-background: black;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
+.para1 {
+    opacity: 0;
+    transform: translateX(-50px); /* Positionne l'élément 50px vers la droite */
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.para1.visible {
+    opacity: 1;
+    transform: translateX(0); /* Ramène l'élément à sa position d'origine */
+}
+
+.para2 {
+    opacity: 0;
+    transform: translateX(50px); /* Positionne l'élément 50px vers la droite */
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.para2.visible {
+    opacity: 1;
+    transform: translateX(0); /* Ramène l'élément à sa position d'origine */
+}
+
+.animation1 {
+    opacity: 0;
+    transform: translateX(-50px); /* Positionne l'élément 50px vers la droite */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animation1.visible {
+    opacity: 1;
+    transform: translateX(0); /* Ramène l'élément à sa position d'origine */
+}
+
+.animation2 {
+    opacity: 0;
+    transform: translateX(50px); /* Positionne l'élément 50px vers la droite */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animation2.visible {
+    opacity: 1;
+    transform: translateX(0); /* Ramène l'élément à sa position d'origine */
+}
+
+.contact {
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    padding: 80px;
+}
+
+.contact .contend h1 {
+    color: #222222;
+    font-size: 55px;
+    font-weight: 600;
+    position: relative; /* Pour positionner le pseudo-élément correctement */
+    padding-bottom: 10px; /* Espace sous le texte pour le trait */
+}
+
+.contact .contend h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 48%;
+    width: 90px; /* Ajustez la longueur du trait ici */
+    height: 5px; /* Épaisseur du trait */
+    background-color: #E74C3C; /* Couleur du trait */
+    top: 100px;
+}

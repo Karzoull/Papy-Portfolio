@@ -53,3 +53,7 @@ const update = () => {
 };
 
 requestAnimationFrame(start);
+
+checkVisibility();
+window.addEventListener('scroll', checkVisibility);
+window.addEventListener('load', checkVisibility);

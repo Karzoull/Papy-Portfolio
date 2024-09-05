@@ -4,6 +4,6 @@ window.addEventListener('load', function() {
 
     setTimeout(function() {
         preloader.style.display = 'none';
-    }, 000);
+    }, 3000);
 });
 
