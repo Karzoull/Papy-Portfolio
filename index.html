@@ -527,7 +527,50 @@ window.addEventListener('load', checkVisibility);
 
 
 window.addEventListener('scroll', checkVisibility);
-    
+
+document.addEventListener('DOMContentLoaded', function() {
+        const elements = document.querySelectorAll('.contact');
+     
+        function checkVisibility() {
+            const windowHeight = window.innerHeight;
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                if (elementTop < windowHeight) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        checkVisibility();
+        window.addEventListener('scroll', checkVisibility);
+        window.addEventListener('load', checkVisibility);
+        
+    });
+
+    function checkVisibility() {
+    const elements = document.querySelectorAll('.services');
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const windowHeight = window.innerHeight;
+
+    elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top + scrollTop;
+
+        if (scrollTop + windowHeight > elementTop) {
+            if (!element.classList.contains('visible')) {
+                console.log('Element is becoming visible:', element);
+            }
+            element.classList.add('visible');
+        }
+    });
+}
+
+
+window.addEventListener('load', checkVisibility);
+
+
+window.addEventListener('scroll', checkVisibility);
+
+
 </script>
 <section class="projets">
     <div class="proj_contend">
@@ -590,9 +633,25 @@ window.addEventListener('scroll', checkVisibility);
     </div>
 </section>
 <section class="contact" id="contact">
-    <div class="contend">
-        <h1>CONTACTEZ-MOI</h1>
-    </div>
+    <h1 class="name">CONTACTEZ-MOI</h1>
+   <div class="information">
+    <li>
+        <div class="card1">
+            <i class="fa-solid fa-map-pin"></i>
+            <p>liberté 6 Extension</p>
+        </div>
+    
+        <div class="card2">
+            <i class="fa-solid fa-phone"></i>
+            <p>+221  771948683</p>
+        </div>
+    
+        <div class="card3">
+            <i class="fa-regular fa-envelope"></i>
+            <p>Papytygeer69@gmail.com</p>
+        </div>
+    </li>
+   </div>
 </section>
 <script src="carte.js"></script>
 <script src="slide.js"></script>

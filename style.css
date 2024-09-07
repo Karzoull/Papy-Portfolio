@@ -1545,12 +1545,10 @@ opacity: 1;
 .contact {
     justify-content: center;
     text-align: center;
-    flex-wrap: wrap;
-    height: 100vh;
-    padding: 80px;
+    padding: 100px;
 }
 
-.contact .contend h1 {
+.contact .name {
     color: #222222;
     font-size: 55px;
     font-weight: 600;
@@ -1558,7 +1556,7 @@ opacity: 1;
     padding-bottom: 10px; /* Espace sous le texte pour le trait */
 }
 
-.contact .contend h1::after {
+.contact  h1::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -1568,3 +1566,54 @@ opacity: 1;
     background-color: #E74C3C; /* Couleur du trait */
     top: 100px;
 }
+
+.contact .information {
+    background-color: rgb(240, 240, 197);
+    padding-left: 80px;
+    padding-top: 300px;
+    margin-top: 100px;
+}
+
+.contact .information li {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: -200px;
+    margin-left: -200px;
+}
+
+.contact .information li .card3,
+.contact .information li .card2,
+.contact .information li .card1 {
+    padding-left: 200px;
+}
+
+.contact .information li i {
+    font-size: 60px;
+    color: #E74C3C;
+}
+
+.contact .information li p {
+    padding-top: 30px;
+    font-size: 15px;
+    color: grey;
+}
+
+
+.contact {
+    opacity: 0;
+    transform: translateX(-100px); /* Start off-screen to the left */
+    transition: opacity 1s ease-out, transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Rebound effect */
+}
+
+/* When the element becomes visible, it transitions to its final state */
+.contact.visible {
+    opacity: 1;
+    transform: translateX(0); /* Slide into view */
+}
+
+@media  screen and (max-width:1028px) {
+   .contact .information li {
+    flex-direction: column;
+   }
+  }
