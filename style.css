@@ -1437,6 +1437,7 @@ opacity: 1;
     .propos .contend {
         margin-top: 490px;
     }
+    
   }
 
   @media  screen and (max-width:768px) {
@@ -1457,9 +1458,7 @@ opacity: 1;
         height: 500px;
     }
 
-    .propos .contend {
-        
-    }
+    
   }
 
 
@@ -1497,6 +1496,36 @@ opacity: 1;
     padding-top: 15px;
     font-weight: 600;
 }
+
+@media  screen and (max-width:768px) {
+    .délimitation .responsive_contend  h1{
+        margin-left: 200px;
+        margin-top: -50px;
+        font-size: 30px;
+        
+    }
+    
+  }
+
+  @media  screen and (max-width:480px) {
+    .délimitation .responsive_contend  h1{
+        margin-left: 100px;
+        margin-top: -45px;
+        font-size: 25px;
+        text-align: center;
+    }
+    
+  }
+
+  @media  screen and (max-width:393px) {
+    .délimitation .responsive_contend  h1{
+        margin-left: 100px;
+        margin-top: -60px;
+        font-size: 25px;
+        text-align: center;
+    }
+    
+  }
 
 .para1 {
     opacity: 0;
@@ -1569,7 +1598,7 @@ opacity: 1;
 
 .contact .information {
     background-color: rgb(240, 240, 197);
-    padding-left: 80px;
+    padding-left: 200px;
     padding-top: 300px;
     margin-top: 100px;
 }
@@ -1579,7 +1608,7 @@ opacity: 1;
     justify-content: center;
     text-align: center;
     margin-top: -200px;
-    margin-left: -200px;
+    margin-left: -340px;
 }
 
 .contact .information li .card3,
@@ -1597,6 +1626,7 @@ opacity: 1;
     padding-top: 30px;
     font-size: 15px;
     color: grey;
+    align-items: center;
 }
 
 
@@ -1612,8 +1642,90 @@ opacity: 1;
     transform: translateX(0); /* Slide into view */
 }
 
-@media  screen and (max-width:1028px) {
-   .contact .information li {
-    flex-direction: column;
-   }
+.contact .dakar {
+    margin-top: -20px;
+}
+
+@media  screen and (max-width:1080px){
+    .contact .information {
+       background-color: white;
+    }
+}
+
+@media  screen and (max-width:768px)  {
+    .contact .information li {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 100px;
+        margin-top: -280px;
+        margin-left: -360px;
+    }
+
+  }
+
+  @media  screen and (max-width:480px) {
+
+    .contact .information  {
+        margin-left: -50px;
+    }
+
+    .contact  h1{
+        margin-top: -20px;
+        margin-left: -50PX;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+    .contact  h1::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 45%;
+        width: 90px; /* Ajustez la longueur du trait ici */
+        height: 5px; /* Épaisseur du trait */
+        background-color: #E74C3C; /* Couleur du trait */
+        top: 180px;
+    }
+    
+  }
+
+  @media  screen and (max-width:393px) {
+    .contact .information  {
+        margin-left: -35px;
+    }
+
+    .contact h1{
+        margin-left: -65px;
+        margin-top: -60px;
+        font-size: 25px;
+        text-align: center;
+    }
+    
+  }
+
+  @media  screen and (width:768px) {
+    .contact  h1::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 45%;
+        width: 90px; /* Ajustez la longueur du trait ici */
+        height: 5px; /* Épaisseur du trait */
+        background-color: #E74C3C; /* Couleur du trait */
+        top: 100px;
+    }
+    
+
+   .contact .information {
+        background-color: white;
+    }
+  }
+
+
+  .footer {
+    height: 60vh;
+    background-color: #2A2A2A;
+    margin-top: 150px;
   }
